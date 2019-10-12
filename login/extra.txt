@@ -1,0 +1,18 @@
+#request from login from
+			email= request.POST['email']
+			password= request.POST['password']
+			obj = Login.objects.filter(email=email, password=password).exists()
+			obj1 = Login.objects.get(email=email, password=password)
+			print(obj1)
+			#userData = obj.get(password=password)
+			#userCount = obj.count()
+			if(obj==True):
+				#successfully login
+				request.session['loginstatus']="1"
+				request.session['loginpk']=obj1.pk
+				#return HttpResponse(request.session['loginstatus']+" - " + str(request.session['loginpk']))
+				return redirect('/home/')
+			else:
+				#invalid user id or password
+				msg = {"errorMsg":"1"}
+				return render(request, 'login.html', msg)

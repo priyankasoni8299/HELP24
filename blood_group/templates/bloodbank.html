@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>bloodbank</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'css/components.css'%}">
+      <link rel="stylesheet" href="{% static 'css/icons.css'%}">
+      <link rel="stylesheet" href="{% static 'css/responsee.css'%}">
+     
+
+      <!-- CUSTOM STYLE -->
+      <link rel="stylesheet" href="{% static 'css/template-style.css'%}">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <!--<link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css'%}">
+        <link rel="stylesheet" href="{% static 'css/form-elements.css'%}">
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+        <link rel="stylesheet" href="{% static 'css/soni_ji_ke_buttons.css'%}">
+      <script type="text/javascript" src="{% static 'js/jquery-1.8.3.min.js'%}"></script>
+      
+      <script type="text/javascript" src="{% static 'js/jquery-ui.min.js'%}"></script> 
+      <style type="text/css">
+      body
+           {
+              background-image: url({% static 'images/1.jpg'%});
+                }
+        .line ul li
+        {
+        	color: white
+        }
+        nav
+        {
+        	height: 65px;
+        }
+
+       </style>  
+   </head>
+   <body class="size-1520" background="{% static 'images/1.jpg'%}">
+      <!-- HEADER -->
+   
+            <div class="box" style="background: transparent;";>
+               <div class="s-12 l-2" >
+                  <img class="full-img logo" src="{% static 'images/help24logo.png'%}">
+               </div>
+         <!-- TOP NAV -->  
+         <div class="line">
+            <nav>
+               <p class="nav-text">Main navigation</p>
+               <div class="top-nav">
+                  <ul class="right">
+                     <li><a href="{%url 'home'%}">Home</a></li>
+                     <li>
+                        <a href="{%url 'About'%}">About</a>
+                     </li>
+                     <li>
+                        <a href="{%url 'feedback'%}">Feedback</a>
+                     </li>
+                     <li>
+                        <a href="{%url 'help'%}">Help</a>
+                     </li>
+                     <li>
+                        <a href="{%url 'log'%}">Logout</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      <!-- ASIDE NAV AND CONTENT -->
+      <div class="line" >
+         <div class="box margin-bottom" style="background:transparent;";>
+            <div class="margin2x">
+               <!-- ASIDE NAV -->
+               <aside class="s-12 m-4 l-3 xl-2" style="background-color: #152732">
+                  <h4 class="margin-bottom" style="background-color: #152732"><b><font color="White">Facilities</b></h4>
+                  <div class="aside-nav minimize-on-small" style="background-color: #152732">
+                     <p class="aside-nav-text">Facilities</p>
+                     <ul style="background-color: #152732">
+                        
+                        <li>
+                           <a href="{%url 'directory'%}"><font color="White">Directory</font></a>
+                        </li>
+                        <li>
+                           <a href="{%url 'bloodbank'%}"><font color="White">Blood bank</font></a>
+                        </li>
+                        <li>
+                           <a href="{%url 'job'%}"><font color="White">Vacancy</font></a>
+                        </li>
+                        <li>
+                           <a href="{%url 'newsuser'%}"><font color="White">News portal</font></a>
+                        </li>
+                    
+                     </ul>
+                  </div>
+               </aside>
+
+                          <div class="form-box" style="width: 475px; margin-left:505px; margin-top: 10px;">
+                                <div class="form-top">
+                                    <div class="form-top-left">
+                  <h2>  <font color="White">Blood bank</font></h2>
+                </div>
+              </div>
+
+                  <div class="form-bottom"> 
+                  <div>
+                   
+                    <a class="btn btn-primary btn-lg" href="{%url 'donarregistration'%}">Donar</a>
+                     <a class="btn btn-primary btn-lg" href="{%url 'donorsearch'%}">Patient</a>
+                    <!-- <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>-->
+                  
+
+                 </div>
+                
+                  </div>
+                      <div>       
+                   </form>
+                </div>
+              </div>  
+            </body>
+      </html>
+   

@@ -1,0 +1,137 @@
+  <!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>patientinfo</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'css/components.css'%}">
+      <link rel="stylesheet" href="{% static 'css/icons.css'%}">
+      <link rel="stylesheet" href="{% static 'css/responsee.css'%}">
+     
+
+      <!-- CUSTOM STYLE -->
+      <link rel="stylesheet" href="{% static 'css/template-style.css'%}">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <!--<link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css'%}">
+        <link rel="stylesheet" href="{% static 'css/form-elements.css'%}">
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+        <link rel="stylesheet" href="{% static 'css/soni_ji_ke_buttons.css'%}">
+      <script type="text/javascript" src="{% static 'js/jquery-1.8.3.min.js'%}"></script>
+      <script type="text/javascript" src="{% static 'js/jquery-ui.min.js'%}"></script>  
+      <style type="text/css">
+      body
+           {
+              background-image: url({% static 'images/1.jpg'%});
+                }
+        .line ul li
+        {
+        	color: white
+        }
+        nav
+        {
+        	height: 65px;
+        }
+        .form-group
+        {
+        	font-size: 25px;
+        }
+
+       </style>  
+   </head>
+   <body class="size-1520" background="{% static 'images/1.jpg'%}">
+      <!-- HEADER -->
+   
+            <div class="box" style="background: transparent";>
+               <div class="s-12 l-2" >
+                  <img class="full-img logo" src="{% static 'images/help24logo.png'%}">
+               </div>
+            
+            
+         <!-- TOP NAV -->  
+         <div class="line">
+            <nav>
+               <p class="nav-text">Main navigation</p>
+               <div class="top-nav">
+                  <ul class="right">
+                     <li><a href="{%url 'home'%}">Home</a></li>
+                     <li>
+                        <a href="{%url 'About'%}">About</a>
+                     </li>
+                     <li>
+                        <a href="{%url 'feedback'%}">Feedback</a>
+                     </li>
+                     <li>
+                        <a href="{%url 'help'%}">Help</a>
+                     </li>
+                     <li>
+                        <a href="{%url 'log'%}">Logout</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      <!-- ASIDE NAV AND CONTENT -->
+      <div class="line" >
+         <div class="box margin-bottom" style="background: transparent";>
+            <div class="margin2x">
+               <!-- ASIDE NAV -->
+               <aside class="s-12 m-4 l-3 xl-2" style="background-color: #152732">
+                  <h4 class="margin-bottom" style="background-color: #152732"><b><font color="White">Facilities</font></b></h4>
+                  <div class="aside-nav minimize-on-small" style="background-color: #152732">
+                     <p class="aside-nav-text">Facilities</p>
+                     <ul style="background-color: #152732">
+                        
+                        <li>
+                           <a href="{%url 'directory'%}"><font color="White">Directory</font></a>
+                        </li>
+                        <li>
+                           <a href="{%url 'bloodbank'%}"><font color="White">Blood bank</font></a>
+                        </li>
+                        <li>
+                           <a href="{%url 'job'%}"><font color="White">Vacancy</font></a>
+                        </li>
+                        <li>
+                           <a href="{%url 'newsuser'%}"><font color="White">News portal</font></a>
+                        </li>
+                     </ul>
+                  </div>
+               </aside>
+                         {% csrf_token %}
+                          <div class="form-box" style="width: 475px; margin-left:505px; margin-top: 10px;">
+                                <div class="form-top">
+                                    <div class="form-top-left">
+                                        <h3><b>Search your blood group:</b></h3>
+                                    </div>
+                                  
+                                </div>
+                                <div class="form-bottom">
+                                    <form role="form" action="" method="post" class="login-form">
+                                      <div class="form-group">
+                                        <table style="background: transparent; border: none;">
+                                          <tr>
+                                            <td style=" border:none;"><a href="?bg=aplus" class="btn btn-light btn-lg btn-block"><font color="black", size="4px"><b>A+</b></font></a></td>
+                                            <td style=" border:none;"><a href="?bg=aminus" class="btn btn-light btn-lg btn-block"><font color="black", size="4px"><b>A-</b></font></a></td>
+                                          </tr>
+                                          <tr style="background: transparent;">
+                                            <td style=" border:none;"><a href="?bg=bplus" class="btn btn-light btn-lg btn-block"><font color="black", size="4px"><b>B+</b></font></a></td>
+                                      <td style=" border:none;"><a href="?bg=bminus" class="btn btn-light btn-lg btn-block"><font color="black", size="4px"><b>B-</b></font></a></td>
+                                          </tr>
+                                          <tr>
+                                    <td style=" border:none;" ><a href="?bg=abplus" class="btn btn-light btn-lg btn-block"><font color="black", size="4px"><b>AB+</b></font></a></td>
+                                    <td style=" border:none;"><a href="?bg=abminus" class="btn btn-light btn-lg btn-block"><font color="black", size="4px"><b>AB-</b></font></a></td>
+                                          </tr>
+                                          <tr style="background: transparent;">
+                                    <td style=" border:none;"><a href="?bg=oplus" class="btn btn-light btn-lg btn-block"><font color="black", size="4px"><b>O+</b></font></a></td>
+                                    <td style=" border:none;"><a href="?bg=ominus" class="btn btn-light btn-lg btn-block"><font color="black", size="4px"><b>O-</b></font></a></td>
+                                          </tr>
+                                        </table>
+                       </div>
+                                    </form>
+                                </div>
+                            </div>
+                        
+                           </body>
+      </html>
+   

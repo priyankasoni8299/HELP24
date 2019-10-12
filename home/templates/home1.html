@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>{% for ss in sess%}
+      {{ss}}
+    {%endfor%}</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'css/components.css'%}">
+      <link rel="stylesheet" href="{% static 'css/icons.css'%}">
+      <link rel="stylesheet" href="{% static 'css/responsee.css'%}">
+      <link rel="stylesheet" href="{% static 'owl-carousel/owl.carousel.css'%}">
+      <link rel="stylesheet" href="{% static 'owl-carousel/owl.theme.css'%}">  
+      <!-- CUSTOM STYLE -->
+      <link rel="stylesheet" href="{% static 'css/template-style.css'%}">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="{% static 'js/jquery-1.8.3.min.js'%}"></script>
+      <script type="text/javascript" src="{% static 'js/jquery-ui.min.js'%}"></script>    
+   </head>
+   <body class="size-1600" background="{% static 'images/1.jpg'%}">
+      <!-- HEADER -->
+      <header style="background-image: url({% static 'images/1.jpg'%}) width: 100% ; height: 100%">
+         <div class="line" style="background-image: url({% static 'images/1.jpg'%}) width:100%; height: 100%;">
+            <div class="box" style="background-image: url({% static 'images/1.jpg'%})";>
+               <div class="s-12 l-2" >
+                  <img class="full-img logo" src="{% static 'images/help24logo.png'%}">
+               </div>
+               <div class="s-12 l-8 right">
+                  <div class="margin">
+                     <form  class="customform s-12 l-8" method="Post">
+                      {% csrf_token %}
+                        <div class="s-9"><input type="text" placeholder="Search form" title="Search form" name="mycity"/></div>
+                        <div class="s-3"><button type="submit">Select</button></div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+       </header>
+         <!-- TOP NAV -->  
+         <div class="line">
+            <nav>
+               <p class="nav-text">Main navigation</p>
+               <div class="top-nav">
+                  <ul class="right">
+                     <li>
+                        <a href="{%url 'home'%}">Home</a></li>
+                     <li>
+                        <a href="{%url 'About'%}">About</a>
+                     </li>
+                     <li>
+                        <a href="{%url 'feedback'%}">Feedback</a>
+                     </li>
+                     <li>
+                        <a href="{%url 'help'%}">Help</a>
+                     </li>
+                     <li>
+                        <a href="{%url 'log'%}">Logout</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <!-- ASIDE NAV AND CONTENT -->
+      <div class="line" >
+         <div class="box margin-bottom" style="background-image: url({% static 'images/1.jpg'%})";>
+            <div class="margin2x">
+               <!-- ASIDE NAV -->
+               <aside class="s-12 m-4 l-3 xl-2" style="background-color: #152732">
+                  <h4 class="margin-bottom" style="background-color: #152732"><b><font color="White">Facilities</b></h4>
+                  <div class="aside-nav minimize-on-small" style="background-color: #152732">
+                     <p class="aside-nav-text">Facilities</p>
+                     <ul style="background-color: #152732">
+                        
+                        <li>
+                           <a href="{%url 'directory' %}"><font color="White">Directory</a>
+                        </li>
+                        <li>
+                           <a href="{%url 'bloodbank'%}"><font color="White">Blood bank</a>
+                        </li>
+                        <li>
+                           <a href="{%url 'job'%}"><font color="White">Vacancy</a>
+                        </li>
+                        <li>
+                           <a href="{%url 'newsuser'%}"><font color="White">News portal</a>
+                        </li>
+                     </font>
+                     </ul>
+                  </div>
+               </aside>
+               <!-- CONTENT -->
+               <section class="s-12 m-8 l-9 xl-10">                  
+                  <!-- CAROUSEL -->  
+                  <div class="line hide-s">
+                    <div id="header-carousel" class="owl-carousel owl-theme">
+                       <div class="item"><img src="{% static 'images/directory.jpg'%}" style="height: 317px" alt=""></div>
+                       <div class="item"><img src="{% static 'images/blood.jpeg'%}" style="height: 317px" alt=""></div>
+                       <div class="item"><img src="{% static 'images/job.jpg'%}" style="height: 317px" alt=""></div>
+                       <div class="item"><img src="{% static 'images/news.png'%}" style="height: 317px" alt=""></div>
+                    </div>
+                  </div>                  
+                  <!-- Breadcrumb -->
+                  <!--s<nav class="breadcrumb-nav">
+                    <ul>
+                      <li><a href="/"><i class="icon-sli-home"></i></a></li>
+                      <li><a href="/">Catalogue</a></li>
+                      <li><a href="/">First Category</a></li>
+                      <li><span>Sub Category 1</span></li>
+                    </ul>
+                  </nav>-->
+                  <h1 class="margin-bottom"><b>Help24</b></h1>
+                  <!-- Pruducts -->
+                  <div class="margin2x">
+                     <div class="s-12 m-8 l-9 xl-10">
+                     <p><font size="5px">In commerce and industry, 24/7 or 24-7 service (usually pronounced "twenty-four seven") is service that is available any time and, usually, every day.<br><br>
+                      As the Help24 provides the directory of the specified place you select.<br><br>
+                      For public needs the Help24 provides the 24x7 blood bank for the patient.<br><br>
+                      There are so many unemployed people are present in nowdays by the help24 they easily found their prespective job.
+
+
+                     </font></p>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+           <script type="text/javascript" src="{% static 'js/responsee.js'%}"></script> 
+      <script type="text/javascript" src="{% static 'owl-carousel/owl.carousel.js'%}"></script>
+      <script type="text/javascript">
+        jQuery(document).ready(function($) {
+          var owl = $('#header-carousel');
+          owl.owlCarousel({
+            nav: false,
+            dots: true,
+            items: 1,
+            loop: true,
+            navText: ["&#xf007","&#xf006"],
+            autoplay: true,
+            autoplayTimeout: 3000
+          });
+        })
+      </script>
+   </body>
+</html>
